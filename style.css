@@ -1,0 +1,60 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Animated gradient background */
+body {
+  height: 100vh;
+  background: linear-gradient(270deg, #6a11cb, #2575fc, #ff6a00);
+  background-size: 600% 600%;
+  animation: gradientMove 12s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Card */
+.card {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 40px 60px;
+  border-radius: 16px;
+  text-align: center;
+  color: white;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+  animation: fadeIn 1.2s ease;
+}
+
+/* Fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+#counter {
+  font-size: 48px;
+  font-weight: bold;
+  color: #00ffcc;
+}
